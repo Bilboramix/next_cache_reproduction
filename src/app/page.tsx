@@ -1,7 +1,8 @@
-import Header from "@/components/Header";
+export default async function Home() {
+  const data = await fetch("https://worldtimeapi.org/api/timezone/Europe/London", {
+    cache: "no-cache",
+  });
+  const json = await data.json();
 
-export default function Home() {
-  console.log("Home page server code");
-  return <main>main</main>;
+  return <main>Home - {json.unixtime}</main>;
 }
-export const dynamic = "force-dynamic";
