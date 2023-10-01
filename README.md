@@ -13,6 +13,6 @@ export default async function Home() {
   });
   const json = await data.json();
 
-  return <main>Home - {json.unixtime}</main>;
+  return <main>Home - {json.unixtime.toString().slice(-4)}</main>;
 }
 ```

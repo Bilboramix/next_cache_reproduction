@@ -1,18 +1,23 @@
-import Link from "next/link";
+import getValue from "@/helpers/getValue";
+import Nav from "../components/Nav";
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const data = await fetch("https://worldtimeapi.org/api/timezone/Europe/Gibraltar", {
+    next: {
+      revalidate: 1,
+    },
+  });
+  const json = await data.json();
+
   return (
     <html lang="en">
       <body>
-        <header>
-          <h1>Header</h1>
-          <Link prefetch={false} href="/test">
-            test
-          </Link>
-          <Link prefetch={false} href="/">
-            home
-          </Link>
-        </header>
+        RootLayout result :
+        <br />
+        {getValue(json.unixtime)}
+        <br />
+        <br />
+        <Nav />
         <main>{children}</main>
       </body>
     </html>
