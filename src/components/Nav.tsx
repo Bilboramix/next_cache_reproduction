@@ -7,15 +7,13 @@ const Nav = () => {
       <br />
       <Link href="/worldTimeApi/NoOpt">TIME API - No Opt</Link>
       <br />
-      <Link href="/worldTimeApi/MimicDynamic">TIME API - Mimic Dynamic</Link>
+      <Link href="/worldTimeApi/MimicDynamic">TIME API - Mimic Dynamic no cache</Link>
+      <br />
+      <Link href="/worldTimeApi/MimicDynamic2">TIME API - Mimic Dynamic no store</Link>
       <br />
       <Link href="/worldTimeApi/MimicStatic">TIME API - Mimic Static</Link>
       <br />
-      <Link href="/routeHandler/NoOpt">ROUTE HANDLER - No Opt</Link>
-      <br />
-      <Link href="/routeHandler/MimicDynamic">ROUTE HANDLER - Mimic Dynamic</Link>
-      <br />
-      <Link href="/routeHandler/MimicStatic">ROUTE HANDLER - Mimic Static</Link>
+      <Link href="/worldTimeApi/tags">TIME API - Mimic Static with tags</Link>
     </nav>
   );
 };
