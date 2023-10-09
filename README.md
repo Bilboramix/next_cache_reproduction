@@ -1,18 +1,11 @@
-[This should mimic getServerSideProps but it's not refreshing at all](https://github.com/Bilboramix/next_cache_reproduction/blob/main/src/app/page.tsx)
+# Next.js Cache Behavior Showcase
 
----
+This repository aims to shed light on the caching behavior of Next.js. It can be used for educational purposes to gain a better understanding of this somewhat obscure aspect.
 
-Also tried this to mimic getStaticProps but it's not working either :
+## Testing Cache
 
-```js
-export default async function Home() {
-  const data = await fetch("https://worldtimeapi.org/api/timezone/Europe/London", {
-    next: {
-      revalidate: 5,
-    },
-  });
-  const json = await data.json();
+Instructions to test the cache are provided as comments on each page.
 
-  return <main>Home - {json.unixtime.toString().slice(-4)}</main>;
-}
-```
+### Clarifications on "MimicDynamic" Pages
+
+The pages "MimicDynamic" and "MimicDynamic2" might appear peculiar. If anyone passing by has insights, please feel free to share!
